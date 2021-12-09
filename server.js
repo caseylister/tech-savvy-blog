@@ -40,7 +40,7 @@ app.set('view engine', 'handlebars');
 
 app.use(routes);
 
-
+// Sequelize sync -- connection to database and server
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Now listening!'));
 });
